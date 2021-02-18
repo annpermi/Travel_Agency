@@ -1,0 +1,268 @@
+.head_body{
+      padding-top:10px;
+    }
+
+    /* лого и контакты */
+    .head_logo{
+      text-align:center;
+      padding:20px;
+      float:left;
+      width:33%;
+    }
+    .head_logo img{
+      width:300px;
+      display:inline-block;
+    }
+
+    .head_info{
+      display:block;
+      position:relative;
+      padding-top:60px;
+    }
+    .head_info a{
+      text-decoration:none;
+      color:#000;
+    }
+    .head_info span{
+      font-size:24px;
+      margin-right:20px;
+    }
+
+    .head_info_social a{
+      line-height:22px;
+      padding:0 10px;
+    }
+
+    /* меню */
+    .head_menu{
+      display:block;
+      padding:6px 0;
+      border-top:3px solid #ffa949;
+    }
+
+    .head_menu input{
+      display:none;
+    }
+    .head_menu label{
+      background:#ffa949;
+      display:block;
+      color:#fff;
+      position:relative;
+      height:40px;
+      cursor:pointer;
+      margin:0;
+      display:none;
+    }
+    .head_menu label:before{
+      font-family:"FontAwesome";
+      content:"\f0c9";
+      position:Absolute;
+      right:30px;
+      top:0;
+      height:40px;
+      background:#ffa949;
+      line-height:40px;
+      text-align:center;
+      font-size:24px;
+    }
+    .head_menu ul{
+      overflow:hidden;
+      transition:0.2s;
+      list-style: none;
+      text-align:Center;
+    }
+    .head_menu li{
+      display:inline-block;
+      text-align:Center;
+
+    }
+    .head_menu li a{
+      font-weight:700;
+      font-size:20px;
+      text-transform:uppercase;
+      color:#0d8dcd;
+      height:40px;
+      line-height:40px;
+      padding:0 20px;
+      display:block;
+    }
+    .head_menu li a:hover{
+      text-decoration:underline;
+      color:red;
+    }
+
+    #head_menu_toogle:checked+label:before{
+      content:"\f00d";
+    }
+    #head_menu_toogle:checked ~ ul{
+      height:200px;
+    }
+    /* form send btn */
+    .formSubmit{
+      font-family: 'PT Sans', sans-serif;
+      display: inline-block;
+      background-color: #ffb400;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 16px;
+      padding: 8px 16px;
+      width: 200px;
+      cursor: pointer;
+      position: relative;
+      text-align:center;
+      left: 50%;
+      transform: translate(-50%, 0);
+      margin-bottom:10px;
+    }
+    .formSubmit:hover{
+      text-decoration:none;
+      color:#fff;
+      opacity:0.7;
+    }
+    /* modal */
+    #modal{
+      position:fixed;
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
+      background:rgba(0,0,0,0.7);
+      display:none;
+      opacity:0;
+      transition:.4s;
+    }
+    .visible{
+      opacity:1 !important;
+    }
+    .modal_message{
+      width:260px;
+      height:100px;
+      position:absolute;
+      top:50%;
+      left:50%;
+      margin-left:-130px;
+      margin-top:-50px;
+      background:#fff;
+      color:#222;
+      text-align:center;
+      padding:10px;
+    }
+    .modal_message b{
+      display:block;
+      font-size:18px;
+      color:#ffa949;
+    }
+
+    /* прочее */
+    .inputFix1{
+      margin-bottom:0;
+    }
+
+    .inputFix2{
+      margin-top:10px;
+    }
+
+    #errorMessage{
+      color:red;
+      font-size:14px;
+      //display:block;
+      display:none;
+      text-align:center;
+    }
+    .input-error{
+      border-bottom:2px solid red !important;
+    }
+    .input-error+label{
+      color:red;
+    }
+    @media screen and (max-width:960px){
+      .head_logo img{
+        width:200px;
+      }
+      .head_info{
+        padding-left:0px;
+        padding-top:44px;
+      }
+      .head_info span{
+        font-size:18px;
+      }
+    }
+
+    @media screen and (max-width:720px){
+      .inputFix1{
+        margin-top:12px;
+      }
+      .inputFix2{
+        margin-top:30px;
+      }
+      .head_logo{
+        text-align:left;
+        padding:20px;
+        float:none;
+        width:100%;
+      }
+      .head_logo img{
+        width:200px;
+      }
+
+      .head_info{
+        padding-left:20px;
+        padding-bottom:10px;
+        padding-top:0;
+      }
+      .head_info span{
+        display:block;
+        font-size:18px;
+        margin-right:20px;
+      }
+
+      .head_info_social{
+        position:Absolute;
+        top:10px;
+        right:20px;
+      }
+      .head_info_social a{
+        font-size:22px;
+      }
+    }
+
+    @media screen and (max-width:720px){
+      .head_menu li a{
+        font-size:14px;
+        padding:0 10px;
+      }
+    }
+    
+    @media screen and (max-width:500px){
+      .inputFix1{
+        margin-top:4px;
+      }
+      .inputFix2{
+        margin-top:28px;
+      }
+
+      .head_menu{
+        padding:0;
+        border:none;
+      }
+      .head_info_social{
+        right:0px;
+      }
+      .head_info_social a{
+        font-size:26px;
+      }
+      .head_menu ul{
+        height:0px;
+      }
+      .head_menu label{
+        display:block;
+      }
+      .head_menu li{
+        display:block;
+      }
+      .head_menu li a{
+        font-size:18px;
+        border-bottom:1px dotted #0d8dcd;
+      }
+    }
